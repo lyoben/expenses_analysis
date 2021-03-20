@@ -10,6 +10,7 @@ Month = ug.class_month.input_month()
 user_date = Month + ' ' + Year
 Date = ug.class_date(user_date).date_format()
 print('Expenses in', user_date)
+print('test now')
 
 read_file = pd.read_csv('main_2020.csv', usecols=['Year','Month','Type','Cost'], parse_dates=[['Month','Year']], low_memory=False)
 user_file = read_file.loc[(read_file['Month_Year'] == Date) & read_file['Type'] & read_file['Cost']]
